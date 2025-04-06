@@ -1,0 +1,21 @@
+@mixin Display($ITEMS, $space, $gap) {
+	display: flex;
+	align-items: $ITEMS;
+	justify-content: $space;
+	gap: $gap;
+}
+@mixin Textstyle($fw, $fs, $lh, $ls, $clr) {
+	font-weight: $fw;
+	font-size: $fs;
+	line-height: $lh;
+	letter-spacing: $ls;
+	color: $clr;
+	transition: all 0.3s;
+}
+@mixin ButtonStyle($BtnClr, $btnBg, $btnBorderClr) {
+	@include Textstyle($fw: 500, $fs: 24px, $lh: 100%, $ls: 0%, $clr: $BtnClr);
+	padding: 11px 35px;
+	border-radius: 10px;
+	background-color: $btnBg;
+	border: 3px solid $btnBorderClr;
+}

@@ -1,0 +1,113 @@
+.hero-section {
+	overflow: hidden;
+	@media (max-width: 568px) {
+		padding: 40px 40px;
+	}
+}
+.hero {
+	@include Display($ITEMS: flex-start, $space: space-between, $gap: 0px);
+	@media (max-width: 1210px) {
+		flex-direction: column-reverse;
+		text-align: center;
+	}
+
+	&__content-wrapper {
+		padding: 323px 0 142px;
+		max-width: 100%;
+		@media (max-width: 1210px) {
+			margin: 0 auto;
+			padding: 20px 0;
+		}
+	}
+	&__title {
+		// width: 568px;
+		margin-bottom: 40px;
+		@include Textstyle(
+			$fw: 700,
+			$fs: 40px,
+			$lh: 100%,
+			$ls: 0%,
+			$clr: $color-black
+		);
+	}
+	&__title--color {
+		color: $color-blue;
+	}
+	&__text {
+		@include Textstyle(
+			$fw: 400,
+			$fs: 18px,
+			$lh: 100%,
+			$ls: 0%,
+			$clr: $color-black
+		);
+		margin-bottom: 50px;
+	}
+	img {
+		@media (max-width: 1210px) {
+			width: 374px;
+			height: 448px;
+			margin: 0 auto;
+		}
+		@media (max-width: 568px) {
+			width: 249px;
+			height: 349px;
+			margin: 0 auto;
+		}
+	}
+	&__links-wrapper {
+		@include Display($ITEMS: start, $space: start, $gap: 40px);
+
+		@media (max-width: 568px) {
+			@include Display($ITEMS: start, $space: start, $gap: 20px);
+		}
+	}
+	&__phone-link {
+		@include ButtonStyle(
+			$BtnClr: $color-white,
+			$btnBg: $bg-button,
+			$btnBorderClr: transparent
+		);
+
+		@media (max-width: 1210px) {
+			margin: 0 auto;
+		}
+
+		@media (max-width: 568px) {
+			padding: 5px 20px 5px;
+			background-color: $bg-button;
+			border-radius: 10px;
+			@include Textstyle(
+				$fw: 500,
+				$fs: 18px,
+				$lh: 100%,
+				$ls: 0%,
+				$clr: $color-white
+			);
+		}
+	}
+	&__more-link {
+		@include ButtonStyle(
+			$BtnClr: $color-black,
+			$btnBg: transparent,
+			$btnBorderClr: $bg-button
+		);
+
+		@media (max-width: 1210px) {
+			margin: 0 auto;
+		}
+
+		@media (max-width: 568px) {
+			padding: 5px 20px 5px;
+			border: 3px solid $bg-button;
+			border-radius: 10px;
+			@include Textstyle(
+				$fw: 500,
+				$fs: 18px,
+				$lh: 100%,
+				$ls: 0%,
+				$clr: $color-black
+			);
+		}
+	}
+}
