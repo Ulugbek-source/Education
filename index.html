@@ -5,10 +5,17 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="./css/main.css" />
 		<title>Обучения</title>
+		<style type="text/tailwindcss">
+			@layer utilities {
+				.content-auto {
+					content-visibility: auto;
+				}
+			}
+		</style>
 	</head>
 	<body>
 		<header class="site-header">
-			<div class="container header">
+			<div class="containers header">
 				<a href="/" class="header__logo-link">
 					<img
 						src="./images/site-logo.svg"
@@ -70,32 +77,79 @@
 				</div>
 			</div>
 		</header>
-		<main class="site-main">
-			<section class="hero-section">
-				<div class="container hero">
-					<div class="hero__content-wrapper">
-						<h2 class="hero__title">
-							<span class="hero__title--color">The Best Future Stars</span>
-							- мы заботимся о будущем вашего ребенка
+		<main>
+			<section
+				class="!pt-[180px] overflow-hidden relative !pb-[142px] bg-[#fafafa]"
+			>
+				<div class="containers">
+					<div class="max-w-[568px] flex flex-col gap-10">
+						<h2 class="font-bold text-[40px] leading-[100%] text-[#000]">
+							<span class="text-[#5855e7]">The Best Future Stars</span> - мы
+							заботимся о будущем вашего ребенка
 						</h2>
-						<p class="hero__text">
+						<p class="font-normal text-[18px] leading-[100%] text-[#000]">
 							Наши опытные преподователи сделают процесс обучения максимально
 							интересным и эффективным для вашего ребенка
 						</p>
-						<div class="hero__links-wrapper">
-							<a class="hero__phone-link" href="#">Позвонить </a>
-							<a class="hero__more-link" href="#">Подробнее </a>
+						<div class="flex items-center justify-between">
+							<a
+								class="!w-[47%] font-medium text-[36px] border-[3px] border-[transparent] leading-[100%] text-white py-[7px] text-center bg-[#6347eb] rounded-[10px]"
+								href="tel:"
+								>Позвонить
+							</a>
+							<button
+								class="!w-[47%] font-medium text-[36px] border-[3px] border-[#6347eb] leading-[100%] text-black py-[7px] text-center bg-[#fff] rounded-[10px]"
+							>
+								Подробнее
+							</button>
 						</div>
 					</div>
-					<img
-						src="./images/children-hero-img.png"
-						alt="Hero img"
-						width="778"
-						height="878"
-					/>
+				</div>
+				<img
+					class="absolute right-0 top-0"
+					src="./images/children-hero-img.png"
+					alt="Hero img"
+				/>
+			</section>
+			<section class="!pt-[214px] !pb-[214px]">
+				<div class="containers">
+					<div class="flex items-center">
+						<img src="./images/about-section-img.png" alt="Abou img" />
+						<div class="flex flex-col gap-10">
+							<span class="font-bold text-[40px] leading-[100%] text-[#000]"
+								>О нас</span
+							>
+							<p class="font-normal text-[24px] leading-[100%] text-[#000]">
+								Для комфортного образования и времяпровождения, мы объединяем
+								детей небольшими комфортными группами, которые разделяются по
+								возрастным категориям, а также и по образовательным
+								направлениям. Индивидуальный подход к каждому ребёнку. В классе
+								не более 10 учеников. Углублённое изучение английского
+								языка.Кроме этого, мы отправляем наших детей на языковую
+								практику за рубеж. Обучение с 8.00 до 17.00; 3-х разовое
+								сбалансированное питание ( по желанию), выполнение домашних
+								заданий.
+							</p>
+							<span class="font-normal text-[24px] leading-[100%] text-[#000]">
+								Все условия и комфорт для ваших детей!</span
+							>
+						</div>
+					</div>
 				</div>
 			</section>
 		</main>
 		<script src="./js/main.js"></script>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						colors: {
+							clifford: '#da373d',
+						},
+					},
+				},
+			}
+		</script>
 	</body>
 </html>
